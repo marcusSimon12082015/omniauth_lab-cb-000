@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20190101171910) do
     t.string   "name"
     t.integer  "uid"
     t.string   "password"
+    t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
