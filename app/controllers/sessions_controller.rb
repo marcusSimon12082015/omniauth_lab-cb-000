@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    binding.pry
+    byebug
     User.where(:email => auth())
   end
 end
