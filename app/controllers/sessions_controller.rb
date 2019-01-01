@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   def create
     auth_hash = request.env["omniauth.auth"]
-    byebug
     user = User.where(:email =>auth_hash["info"]["name"]).first_or_create do |user|
       user.password = SecureRandom.hex
     end
