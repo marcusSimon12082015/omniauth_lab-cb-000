@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
     user = User.where(:email =>auth_hash["info"]["email"]).first_or_create do |user|
       user.password = SecureRandom.hex
     end
-    session[:user_id] = user.id
     byebug
+    session[:user_id] = user.id
     redirect_to root_path
   end
 end
