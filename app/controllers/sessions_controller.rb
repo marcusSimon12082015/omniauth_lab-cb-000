@@ -5,5 +5,6 @@ class SessionsController < ApplicationController
       user.password = SecureRandom.hex
     end
     session[:user_id] = user.id
+    redirect_to root_path
   end
 end
